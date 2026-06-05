@@ -8,13 +8,14 @@ public class GameManager : MonoBehaviour
 {
     private Inventory<string> inventory = new();
     private Inventory<int> inventory2 = new();
-
+    public SkillUI skillUI;
     private Player player;
 
     public SkillManager skillManager;
 
     void Start()
     {
+        Debug.Log("GameManager iniciado");
         player = new Player();
 
         player.Name = "Rolando";
@@ -116,6 +117,8 @@ public class GameManager : MonoBehaviour
             s => s.id == 999,
             out _
         );
+
+        skillUI.Mostrar(player);
     }
 
     public int GetPlayerLife(Player player)
