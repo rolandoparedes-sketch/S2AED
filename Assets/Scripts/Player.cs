@@ -1,4 +1,4 @@
-using System.Collections.Generic; // 🔥 ESTA LÍNEA FALTABA
+using System.Collections.Generic; 
 using UnityEngine;
 
 public class Player : IDamageable
@@ -7,7 +7,7 @@ public class Player : IDamageable
     public int Life;
     public int nivel;
 
-    public List<Skill> habilidades = new(); // ahora sí funciona
+    public List<Skill> habilidades = new(); 
 
     public void Move()
     {
